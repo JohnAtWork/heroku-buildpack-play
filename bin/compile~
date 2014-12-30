@@ -40,9 +40,6 @@ IVY_PATH=".ivy2"
 # Change dir to handle relative paths
 cd $BUILD_DIR
 
-# Save our custom ivysettings.xml file
-copy -f .ivy2/ivysettings.xml ./ivysettings.bak
-
 # Unpack cache
 for DIR in $PLAY_PATH $IVY_PATH ; do
   rm -rf $DIR
@@ -73,14 +70,13 @@ else
   fi
 fi
 
-#PLAY_SETTINGS_URL="http://s3.amazonaws.com/heroku-jvm-langpack-play/ivysettings.xml"
+PLAY_SETTINGS_URL="http://s3.amazonaws.com/heroku-jvm-langpack-play/ivysettings.xml"
 
 echo -n "-----> Installing ivysettings.xml....."
 if [ -f .ivy2/ivysettings.xml ]; then
   rm .ivy2/ivysettings.xml
 fi
-cp -f ivysettings.bak .ivy2/ivysettings.xml
-#curl --silent --max-time 10 --location $PLAY_SETTINGS_URL --create-dirs --output .ivy2/ivysettings.xml
+curl --silent --max-time 10 --location $PLAY_SETTINGS_URL --create-dirs --output .ivy2/ivysettings.xml
 echo " done"
 
 # Build app
