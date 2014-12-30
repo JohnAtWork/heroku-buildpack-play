@@ -41,7 +41,7 @@ IVY_PATH=".ivy2"
 cd $BUILD_DIR
 
 # Save our custom ivysettings.xml file
-copy .ivy2/ivysettings.xml ./ivysettings.bak
+cp .ivy2/ivysettings.xml ./ivysettings.bak
 
 # Unpack cache
 for DIR in $PLAY_PATH $IVY_PATH ; do
