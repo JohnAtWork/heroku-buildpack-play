@@ -39,10 +39,12 @@ jdk_overlay ${BUILD_DIR}
 echo " done"
 echo $JAVA_HOME
 $JAVA_HOMEbin/java --version 
-ls -lad
-ls -la $JAVA_HOME
-find /
-find $JAVA_HOME
+#ls -lad
+#ls -la $JAVA_HOME
+#find /
+#find $JAVA_HOME
+ls -l $JAVA_HOME/bin/java
+ls -l $JAVA_HOME/bin
 
 PLAY_PATH=".play"
 IVY_PATH=".ivy2"
