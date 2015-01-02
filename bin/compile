@@ -11,11 +11,6 @@ BIN_DIR=$(cd $(dirname $0); pwd) # absolute path
 # source in common functions
 . $BIN_DIR/common.sh
 
-JDK_URL_1_7=https://s3.amazonaws.com/testingherokustuff/jdk-7u71-linux-x64.tar2.gz
-#https://s3.amazonaws.com/testingherokustuff/jdk-7u71-linux-x64.tar.gz
-#openjdk-1.7.0-u60-unofficial-linux-i586-image.tar.gz
-
-#http://download.oracle.com/otn-pub/java/jdk/7u71-b14/jdk-7u71-linux-x64.tar.gz
 
 JVM_COMMON_BUILDPACK=http://lang-jvm.s3.amazonaws.com/jvm-buildpack-common-v8.tar.gz
 mkdir -p /tmp/jvm-common
